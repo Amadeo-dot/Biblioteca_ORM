@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.biblioteca.Clases;
 import jakarta.persistence.*;
 import java.util.Date;
@@ -29,6 +26,9 @@ public class Reserva {
     @Column(name = "FECHA_DEVOLUCION")
     @Temporal(TemporalType.DATE)
     private Date fechaDevolucion;
+
+    public Reserva() {
+    }
 
     public Reserva(Integer id, Libro libro, Associado asociado, Date fechaReserva, Date fechaDevolucion) {
         this.id = id;
@@ -77,6 +77,15 @@ public class Reserva {
     public void setFechaDevolucion(Date fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
     }
-    
+
+    //to string con las fechas en formato dd/MM/yyyy
+    @Override
+    public String toString() {
+        java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("dd/MM/yyyy");
+        String fechaReservaStr = (fechaReserva != null) ? sdf.format(fechaReserva) : "N/A";
+        String fechaDevolucionStr = (fechaDevolucion != null) ? sdf.format(fechaDevolucion) : "N/A";
+        return "Reserva{" + "id=" + id + ", libro=" + libro.getTitulo() + ", asociado=" + asociado.getNombre() + ", fechaReserva=" + fechaReservaStr + ", fechaDevolucion=" + fechaDevolucionStr + '}';
+    }
+
     
 }
