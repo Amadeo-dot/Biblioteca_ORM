@@ -273,6 +273,7 @@ public class Biblioteca {
             System.out.println("2. Eliminar reserva");
             System.out.println("3. Ver reservas por Libro");
             System.out.println("4. Ver reservas por Asociado");
+            System.out.println("5. Ver todas las reservas");
             System.out.println("0. Volver al menú principal");
             System.out.print("Seleccione: ");
             opcion = lector.nextInt();

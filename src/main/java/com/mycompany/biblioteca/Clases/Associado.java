@@ -28,7 +28,7 @@ public class Associado {
     @Column(name = "TELEFONO")
     private String telefono;
     
-    @ManyToMany(mappedBy = "reservados")
+    @ManyToMany(mappedBy = "reservados", fetch = FetchType.EAGER)
     private List<Libro> librosReservados = new ArrayList<>();
 
     public List<Libro> getLibrosReservados() {

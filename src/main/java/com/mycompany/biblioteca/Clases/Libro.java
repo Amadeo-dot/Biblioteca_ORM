@@ -29,7 +29,7 @@ public class Libro {
     @JoinColumn(name = "id_categoria")
     private Categoria categoria;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "reservas",
             joinColumns = @JoinColumn(name = "id_libro"),

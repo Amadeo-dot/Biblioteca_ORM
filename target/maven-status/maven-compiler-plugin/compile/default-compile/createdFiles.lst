@@ -1,9 +1,0 @@
-com\mycompany\biblioteca\Biblioteca.class
-com\mycompany\biblioteca\dao\ReservaDAO.class
-com\mycompany\biblioteca\dao\AssociadoDAO.class
-com\mycompany\biblioteca\dao\LibroDAO.class
-com\mycompany\biblioteca\dao\CategoriaDAO.class
-com\mycompany\biblioteca\Clases\Categoria.class
-com\mycompany\biblioteca\Clases\Associado.class
-com\mycompany\biblioteca\Clases\Libro.class
-com\mycompany\biblioteca\JPAUtil.class
